@@ -1,0 +1,14 @@
+// charset
+@charset "UTF-8";
+
+@import "~normalize.css";
+@import "~breakpoint-sass";
+
+@import "../css/fonts.css";
+@import "../css/slick.css";
+@import "../css/slick-theme.css";
+
+// Custom styles
+@import "variables";
+@import "layout";
+@import "onepage";
