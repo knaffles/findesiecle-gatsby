@@ -34,21 +34,21 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <header>
+      <header className="header">
         <div class="row">
           <div class="header-container">
             <div class="header-title">
-              <a href="/index.html">
+              <Link to="/">
                 Fin-De<span class="bumpit-baby">-</span>Siècle
-              </a>
+              </Link>
             </div>
             <nav role="navigation" id="main-nav">
               <ul>
                 <li>
-                  <a href="/index.html">home</a>
+                  <Link to="/">home</Link>
                 </li>
                 <li>
-                  <a href="/contact.html">contact</a>
+                  <Link to="/contact">contact</Link>
                 </li>
               </ul>
             </nav>

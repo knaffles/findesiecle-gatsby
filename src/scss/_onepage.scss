@@ -84,7 +84,7 @@ h2 {
 // End typography
 //------------------------------------------------------------------------------
 
-header {
+.header {
   background-color: white;
   border-bottom: 1px solid $border;
   height: $nav-height;
@@ -614,5 +614,14 @@ section .row {
   }
   iframe {
     height: 650px;
+  }
+}
+
+.product {
+  display: flex;
+
+  > div {
+    width: 50%;
+    padding: 1rem;
   }
 }

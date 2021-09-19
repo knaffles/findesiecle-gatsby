@@ -32,15 +32,19 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "product"
-    label: "Product"
+    label: "Products"
     folder: "src/products"
     create: true
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "product" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Artist/Factory", name: "artist", widget: "text" }
       - { label: "Description", name: "description", widget: "text" }
+      - { label: "Dimensions", name: "dimensions", widget: "string" }
+      - { label: "Reference", name: "reference", widget: "text" }
+      - { label: "Condition", name: "condition", widget: "text" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
-
+      - { label: "Sold", name: "sold", widget: "boolean" }
   - name: "pages"
     label: "Pages"
     files:
