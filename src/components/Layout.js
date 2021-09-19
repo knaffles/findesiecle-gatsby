@@ -7,7 +7,7 @@ import { withPrefix } from "gatsby";
 import "../scss/styles.scss";
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
+  // const { title, description } = useSiteMetadata();
   return (
     <div>
       <Helmet>
