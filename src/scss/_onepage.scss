@@ -56,11 +56,28 @@ h6 {
 }
 
 h2 {
-  font-family: "Anton", sans-serif;
-  font-size: 38px;
+  font-family: $anton;
+  font-size: 2.375rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: $brown;
+  margin-bottom: 2em;
+}
+
+h3,
+.h3 {
+  font-family: $anton;
+  font-size: 1.15rem;
   font-weight: normal;
   text-transform: uppercase;
   color: #4c3f37;
+  margin-bottom: 0.25rem;
+}
+
+p {
+  // letter-spacing: 0.1px;
+  line-height: 1.4;
+  margin-top: 0;
 }
 
 .text-large {
@@ -68,6 +85,10 @@ h2 {
     font-size: 1.6rem;
   }
   font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .bumpit-baby {
@@ -83,6 +104,26 @@ h2 {
 }
 // End typography
 //------------------------------------------------------------------------------
+
+// Base elements
+.btn {
+  display: inline-block;
+  border: 0;
+  background-color: $brown;
+  color: $white;
+  font-family: $anton;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 2rem;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($brown, 10%);
+    color: $white;
+  }
+}
+
+// Layout elements
 
 .header {
   background-color: white;
@@ -225,6 +266,27 @@ section .row {
   @extend .subhero;
   color: $greyish;
   margin: 0 auto;
+}
+
+.home-hero {
+  height: 24rem;
+  margin-bottom: 6rem;
+}
+
+.home-text {
+  margin-left: 35%;
+
+  h1 {
+    font-family: $anton;
+    font-size: 3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #4c3f37;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
 }
 
 #start {
@@ -533,33 +595,8 @@ section .row {
 }
 
 .sample {
-  // background: url(../images/sample-lg.jpg) no-repeat center center;
   background-size: cover;
 }
-
-// .work-blurb {
-//   @include breakpoint($small) {
-//     &.right {
-//       width: 45%;
-//       padding: 0 0 0 1rem;
-//       float: left;
-//     }
-//     &.left {
-//       width: 45%;
-//       float: right;
-//       padding: 0 1rem 0 0;
-//     }
-//   }
-//   h2 {
-//     font-family: $serif;
-//     font-size: 2rem;
-//     font-weight: 700;
-//     margin-bottom: 1rem;
-//   }
-//   p {
-//     line-height: 1.4;
-//   }
-// }
 
 .sample-caption {
   max-width: 600px;
@@ -581,10 +618,6 @@ section .row {
   }
   color: $greyish;
   h2 {
-    // font-size: 3rem;
-    // font-weight: bold;
-    // letter-spacing: 2px;
-    // text-transform: uppercase;
     text-align: center;
   }
   input[type="text"],
@@ -618,10 +651,17 @@ section .row {
 }
 
 .product {
+  align-items: center;
   display: flex;
+  margin-bottom: 6rem;
 
   > div {
     width: 50%;
     padding: 1rem;
+
+    &.product-thumbnail {
+      padding-left: 0;
+      padding-right: 4rem;
+    }
   }
 }

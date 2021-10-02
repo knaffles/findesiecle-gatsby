@@ -10,11 +10,14 @@ $micro-only: max-width ($micro - 1);
 $small-only: max-width ($small - 1);
 
 $sans-serif: Helvetica, sans-serif;
-$bing: 'Bing', serif;
+$bing: "Bing", serif;
+$anton: "Anton", sans-serif;
 
+$white: #ffffff;
 $whiteish: darken(#fff, 20%);
 $lightgrey: #bfc0bf;
 $darkgrey: #1a1919;
 $greyish: rgba(0, 0, 0, 0.5);
 $blueish: #415f93;
+$brown: #4c3f37;
 $border: $lightgrey;

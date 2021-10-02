@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
+import InnerHTML from "dangerously-set-html-content";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const Products = ({ data }) => {
@@ -12,7 +13,7 @@ const Products = ({ data }) => {
         products.map(({ node: product }) => (
           <article className="product" key={product.id}>
             {product.frontmatter.featuredimage ? (
-              <div className="featured-thumbnail">
+              <div className="product-thumbnail">
                 <PreviewCompatibleImage
                   imageInfo={{
                     image: product.frontmatter.featuredimage,
@@ -22,18 +23,32 @@ const Products = ({ data }) => {
               </div>
             ) : null}
             <div>
-              <p>Artist: {product.frontmatter.artist}</p>
-              <p>
-                Description: {product.frontmatter.description}
-                {/* <br />
-                  <br />
-                  <Link className="button" to={product.fields.slug}>
-                    Keep Reading →
-                  </Link> */}
-              </p>
-              <p>Dimensions: {product.frontmatter.dimensions}</p>
-              <p>Reference: {product.frontmatter.reference}</p>
-              <p>Condition: {product.frontmatter.condition}</p>
+              <div class="h3">Artist/Factory:</div>
+              <p>{product.frontmatter.artist}</p>
+
+              <div class="h3">Description:</div>
+              <p>{product.frontmatter.description}</p>
+
+              <div class="h3">Dimensions:</div>
+              <p>{product.frontmatter.dimensions}</p>
+
+              <div class="h3">Reference:</div>
+              <p>{product.frontmatter.reference}</p>
+
+              <div class="h3">Condition:</div>
+              <p>{product.frontmatter.condition}</p>
+
+              <div id="product-component-1633141363044"></div>
+              <a
+                href="https://findesiecle.myshopify.com/cart/39474933825757:1?channel=buy_button"
+                className="btn"
+                aria-label={`Buy ${product.frontmatter.title}`}
+                target="_blank"
+              >
+                Buy
+              </a>
+
+              {/* <InnerHTML html={myScript} /> */}
             </div>
           </article>
         ))}
@@ -65,8 +80,8 @@ export default () => (
                 sold
                 featuredimage {
                   childImageSharp {
-                    fixed(width: 400, height: 400) {
-                      ...GatsbyImageSharpFixed
+                    fluid(maxWidth: 1200) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
