@@ -6,7 +6,6 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "bulma": "^0.9.0",
-    "dangerously-set-html-content": "^1.0.9",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-netlify": "^2.2.4",

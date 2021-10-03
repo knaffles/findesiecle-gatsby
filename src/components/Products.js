@@ -1,7 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Link, graphql, StaticQuery } from "gatsby";
-import InnerHTML from "dangerously-set-html-content";
+// import PropTypes from "prop-types";
+import { graphql, StaticQuery } from "gatsby";
 import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 const Products = ({ data }) => {
@@ -38,17 +37,24 @@ const Products = ({ data }) => {
               <div class="h3">Condition:</div>
               <p>{product.frontmatter.condition}</p>
 
-              <div id="product-component-1633141363044"></div>
-              <a
-                href="https://findesiecle.myshopify.com/cart/39474933825757:1?channel=buy_button"
-                className="btn"
-                aria-label={`Buy ${product.frontmatter.title}`}
-                target="_blank"
-              >
-                Buy
-              </a>
+              {product.frontmatter.checkoutlink && (
+                <a
+                  href={product.frontmatter.checkoutlink}
+                  className="btn"
+                  aria-label={`Buy ${product.frontmatter.title}`}
+                  target="_blank"
+                >
+                  Buy
+                </a>
+              )}
 
-              {/* <InnerHTML html={myScript} /> */}
+              {product.frontmatter.sold && <p className="sold">Sold</p>}
+
+              {!product.frontmatter.checkoutlink && !product.frontmatter.sold && (
+                <p>
+                  <em>Not available for purchase.</em>
+                </p>
+              )}
             </div>
           </article>
         ))}
@@ -77,6 +83,7 @@ export default () => (
                 dimensions
                 reference
                 condition
+                checkoutlink
                 sold
                 featuredimage {
                   childImageSharp {

@@ -11,6 +11,12 @@
 
 * {
   box-sizing: border-box;
+
+  &:focus,
+  &:focus-visible {
+    border-color: $brown;
+    outline-color: $brown;
+  }
 }
 
 strong {
@@ -55,6 +61,14 @@ h6 {
   margin-top: 0;
 }
 
+h1 {
+  font-family: $anton;
+  font-size: 3rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: $brown;
+}
+
 h2 {
   font-family: $anton;
   font-size: 2.375rem;
@@ -95,8 +109,10 @@ p {
   margin-left: -10px;
 }
 
-.red {
-  color: red;
+.sold {
+  color: rgb(189, 35, 35);
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .lh16 {
@@ -121,6 +137,20 @@ p {
     background-color: lighten($brown, 10%);
     color: $white;
   }
+}
+
+// Form elements
+
+.field {
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  color: $greyish;
+  padding: 0.75em;
+  min-width: 24rem;
 }
 
 // Layout elements
@@ -269,19 +299,33 @@ section .row {
 }
 
 .home-hero {
-  height: 24rem;
+  @include breakpoint($medium) {
+    height: 24rem;
+  }
   margin-bottom: 6rem;
 }
 
-.home-text {
-  margin-left: 35%;
+.home-hero-container {
+  @include breakpoint($medium) {
+    flex-direction: row;
+  }
+  display: flex;
+  flex-direction: column;
+}
 
-  h1 {
-    font-family: $anton;
-    font-size: 3rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: #4c3f37;
+.home-image {
+  @include breakpoint($medium) {
+    flex-shrink: 0;
+    margin: 0;
+  }
+  width: 24rem;
+  margin: 0 auto 2rem auto;
+}
+
+.home-text {
+  @include breakpoint($medium) {
+    flex-grow: 1;
+    padding-left: 3rem;
   }
 
   p {
@@ -651,17 +695,30 @@ section .row {
 }
 
 .product {
-  align-items: center;
+  @include breakpoint($medium) {
+    align-items: center;
+    flex-direction: row;
+  }
   display: flex;
+  flex-direction: column;
   margin-bottom: 6rem;
 
   > div {
-    width: 50%;
-    padding: 1rem;
+    @include breakpoint($medium) {
+      width: 50%;
+      padding: 1rem;
+    }
 
     &.product-thumbnail {
-      padding-left: 0;
-      padding-right: 4rem;
+      @include breakpoint(max-width $medium) {
+        margin: 0 auto 3rem auto;
+        max-width: 450px;
+        width: 100%;
+      }
+      @include breakpoint($medium) {
+        padding-left: 0;
+        padding-right: 4rem;
+      }
     }
   }
 }
