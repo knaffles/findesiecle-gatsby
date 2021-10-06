@@ -25,8 +25,13 @@ collections:
       - { label: "Reference", name: "reference", widget: "text" }
       - { label: "Condition", name: "condition", widget: "text" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
-      - { label: "Checkout Link", name: "checkoutlink", widget: "string" }
-      - { label: "Sold", name: "sold", widget: "boolean" }
+      - {
+          label: "Checkout Link",
+          name: "checkoutlink",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Sold", name: "sold", widget: "boolean", required: false }
   - name: "pages"
     label: "Pages"
     files:

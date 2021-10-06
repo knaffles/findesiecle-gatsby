@@ -43,6 +43,7 @@ const Products = ({ data }) => {
                   className="btn"
                   aria-label={`Buy ${product.frontmatter.title}`}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Buy
                 </a>

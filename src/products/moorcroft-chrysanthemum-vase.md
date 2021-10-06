@@ -6,6 +6,6 @@ description: Macintyre Chrysanthemum pattern vase in double your form, circa 191
 dimensions: 12” (height)
 reference: Moorcroft, Paul Atterbury, Richard Dennis and Hugh Edwards, Somerset, UK, 1990, p.74
 condition: Excellent
-featuredimage: /img/products/pic1.jpg
+featuredimage: /img/pic1.jpg
 sold: false
 ---
