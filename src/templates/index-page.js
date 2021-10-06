@@ -24,19 +24,11 @@ const IndexPage = ({ data }) => {
               />
             </div>
             <div className="home-text">
-              <h1>About Fin-De-Siècle</h1>
-              <p>
-                Based north of Chicago, Fin-De-Siècle specializes in late-19th
-                and early-20th century decorative arts. If you would like to
-                know more about what we offer, please contact us using the form
-                below.
-              </p>
+              <h1>{frontmatter.heading}</h1>
+              <p>{frontmatter.description}</p>
             </div>
           </div>
         </div>
-
-        {/* <button id="show-descr">Show descriptions</button> */}
-        {/* <Carousel /> */}
       </section>
 
       <section>
@@ -71,6 +63,8 @@ export const pageQuery = graphql`
             }
           }
         }
+        heading
+        description
       }
     }
   }
