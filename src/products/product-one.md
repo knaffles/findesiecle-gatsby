@@ -1,6 +1,6 @@
 ---
 type: product
-title: Moorcroft Vase
+title: Moorcroft Hazledene Landscape Vase
 artist: William Moorcroft
 description: A very rare Hazledene Landscape ceramic vase made for Liberty &
   Co., circa 1903. Green facsimile signature and inscribed MADE FOR LIBERTY &
