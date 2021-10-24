@@ -7,5 +7,6 @@ dimensions: 5.75” (height)
 reference: "Ceramics From the House of Amphora: 1890-1915, Richard L. Scott, 2004, p.90"
 condition: Very good, with minor restoration to the tip of the leaves
 featuredimage: /img/pic4.jpg
+checkoutlink: https://findesiecle.myshopify.com/cart/41922785837277:1?channel=buy_button
 sold: true
 ---
