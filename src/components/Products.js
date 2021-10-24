@@ -37,7 +37,7 @@ const Products = ({ data }) => {
               <div class="h3">Condition:</div>
               <p>{product.frontmatter.condition}</p>
 
-              {product.frontmatter.checkoutlink && (
+              {product.frontmatter.checkoutlink && !product.frontmatter.sold && (
                 <a
                   href={product.frontmatter.checkoutlink}
                   className="btn"

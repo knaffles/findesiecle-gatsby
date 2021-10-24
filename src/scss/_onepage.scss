@@ -33,8 +33,10 @@ body {
 }
 
 a {
-  color: $blueish;
+  color: $greyish;
+  font-weight: bold;
   text-decoration: none;
+
   &:hover,
   &:focus {
     color: darken($blueish, 20%);

@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
             </div>
             <div className="home-text">
               <h1>{frontmatter.heading}</h1>
-              <p>{frontmatter.description}</p>
+              <div dangerouslySetInnerHTML={{ __html: frontmatter.bodytext }} />
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export const pageQuery = graphql`
           }
         }
         heading
-        description
+        bodytext
       }
     }
   }
