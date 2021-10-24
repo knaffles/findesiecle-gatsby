@@ -1,6 +1,6 @@
 ---
 type: product
-title: Allegory of Germany porcelain vase
+title: Allegory of Germany Porcelain Vase
 artist: Riessner, Stellmacher & Kessel, Amphora. Designed by Paul Dachsel
 description: Allegory of Germany porcelain vase, circa 1900. Factory mark on base
 dimensions: 11” (height)
