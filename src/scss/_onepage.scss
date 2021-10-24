@@ -34,13 +34,16 @@ body {
 
 a {
   color: $greyish;
-  font-weight: bold;
   text-decoration: none;
 
   &:hover,
   &:focus {
     color: darken($blueish, 20%);
   }
+}
+
+p a {
+  font-weight: bold;
 }
 
 img {
