@@ -9,5 +9,6 @@ reference: Monsters and Maidens, Collector’s Edition, Amphora Pottery, Byron
   Vreeland, p.189
 condition: Very good, with minor restoration to the tip of the leaves
 featuredimage: /img/pic2.jpg
+checkoutlink: https://findesiecle.myshopify.com/cart/41922781085917:1?channel=buy_button
 sold: false
 ---
