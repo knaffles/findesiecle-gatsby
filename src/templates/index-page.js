@@ -8,7 +8,7 @@ import Products from "../components/Products";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout>
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
             </div>
             <div className="home-text">
               <h1>{frontmatter.heading}</h1>
-              <div dangerouslySetInnerHTML={{ __html: frontmatter.bodytext }} />
+              <div dangerouslySetInnerHTML={{ __html: html }} />;
             </div>
           </div>
         </div>
@@ -54,6 +54,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         title
         image {
@@ -64,7 +65,6 @@ export const pageQuery = graphql`
           }
         }
         heading
-        bodytext
       }
     }
   }
